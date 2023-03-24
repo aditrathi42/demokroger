@@ -1,6 +1,6 @@
-package com.example.demokrogger.demokrogger.repository;
+package com.example.demokroger.demokroger.repository;
 
-import com.example.demokrogger.demokrogger.model.Employee;
+import com.example.demokroger.demokroger.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
-package com.example.demokrogger.demokrogger.service;
+package com.example.demokroger.demokroger.service;
 
-import com.example.demokrogger.demokrogger.error.EmployeeNotFoundException;
-import com.example.demokrogger.demokrogger.model.Employee;
-import com.example.demokrogger.demokrogger.repository.EmployeeRepository;
+import com.example.demokroger.demokroger.error.EmployeeNotFoundException;
+import com.example.demokroger.demokroger.model.Employee;
+import com.example.demokroger.demokroger.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;

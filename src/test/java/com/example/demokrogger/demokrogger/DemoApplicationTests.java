@@ -1,10 +1,10 @@
-package com.example.demokrogger.demokrogger;
+package com.example.demokroger.demokroger;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemokroggerApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {

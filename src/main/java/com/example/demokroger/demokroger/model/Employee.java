@@ -1,4 +1,4 @@
-package com.example.demokrogger.demokrogger.model;
+package com.example.demokroger.demokroger.model;
 
 import jakarta.persistence.*;
 import lombok.*;

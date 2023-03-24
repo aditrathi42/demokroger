@@ -1,4 +1,4 @@
-package com.example.demokrogger.demokrogger.error;
+package com.example.demokroger.demokroger.error;
 
 public class EmployeeNotFoundException extends RuntimeException {
     public EmployeeNotFoundException(String errorMessage) {
