@@ -21,7 +21,7 @@ public class EmployeeController {
 
 
     @GetMapping("/{id}")
-    public Employee getEmployeeById(@PathVariable Integer id) throws EmployeeNotFoundException {
-        return employeeService.getEmployeeById(id);
+    public void getEmployeeById(@PathVariable Integer id) throws EmployeeNotFoundException {
+//        return employeeService.getEmployeeById(id);
     }
 }
