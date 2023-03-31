@@ -6,7 +6,9 @@ import com.example.demokroger.demokroger.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/employee")
@@ -20,8 +22,11 @@ public class EmployeeController {
     }
 
 
-    @GetMapping("/{id}")
-    public void getEmployeeById(@PathVariable Integer id) throws EmployeeNotFoundException {
-//        return employeeService.getEmployeeById(id);
+    @GetMapping("/")
+    public String getEmployeeById() throws EmployeeNotFoundException, IOException, ExecutionException, InterruptedException {
+         employeeService.getEmployeeById();
+         return "Message published";
+
     }
+
 }
