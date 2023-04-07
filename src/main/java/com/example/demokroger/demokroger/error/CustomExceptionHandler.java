@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class CustomExceptionHandler {
 
-    @ExceptionHandler(EmployeeNotFoundException.class)
-    public ProblemDetail handleEmployeeNotFoundException(EmployeeNotFoundException e) {
+    @ExceptionHandler(UserNotFoundException.class)
+    public ProblemDetail handleEmployeeNotFoundException(UserNotFoundException e) {
         ProblemDetail detail = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, e.getMessage());
         return detail;
     }

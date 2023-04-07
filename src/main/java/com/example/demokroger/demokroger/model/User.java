@@ -6,15 +6,15 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "employee", schema = "demo")
+@Table(name = "user", schema = "demo")
 @Entity
-public class Employee {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Integer id;
     private String name;
     private String email;
-    private String designation;
+    private String password;
 
 }
