@@ -1,4 +1,4 @@
-package com.example.demokroger.demokroger.config;
+package com.example.demokroger.demokroger.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
-    private String token;
+public class LoginRequest {
+
+    private String email;
+    private String password;
 }

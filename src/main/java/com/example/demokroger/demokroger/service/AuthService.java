@@ -1,12 +1,12 @@
 package com.example.demokroger.demokroger.service;
 
-import com.example.demokroger.demokroger.bean.LoginRequest;
-import com.example.demokroger.demokroger.config.AuthenticationResponse;
-import com.example.demokroger.demokroger.config.JwtService;
+import com.example.demokroger.demokroger.enums.UserRole;
 import com.example.demokroger.demokroger.error.UserNotFoundException;
-import com.example.demokroger.demokroger.model.Role;
 import com.example.demokroger.demokroger.model.User;
 import com.example.demokroger.demokroger.repository.UserRepository;
+import com.example.demokroger.demokroger.request.LoginRequest;
+import com.example.demokroger.demokroger.response.AuthenticationResponse;
+import com.example.demokroger.demokroger.security.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 public class AuthService {
     @Autowired
     UserRepository userRepository;
-
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -31,7 +30,7 @@ public class AuthService {
                 .name(user.getName())
                 .email(user.getEmail())
                 .password(passwordEncoder.encode(user.getPassword()))
-                .role(Role.valueOf(user.getRole().name()))
+                .userRole(UserRole.valueOf(user.getUserRole().name()))
                 .build();
 
 
@@ -49,7 +48,7 @@ public class AuthService {
                         loginRequest.getPassword()
                 )
         );
-        User user =  userRepository.findByEmail(loginRequest.getEmail())
+        User user = userRepository.findByEmail(loginRequest.getEmail())
                 .orElseThrow(() -> new UserNotFoundException("User not found"));
         String token = jwtService.generateToken(user);
         return AuthenticationResponse.builder()

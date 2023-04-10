@@ -1,4 +1,4 @@
-package com.example.demokroger.demokroger.config;
+package com.example.demokroger.demokroger.security;
 
 import com.example.demokroger.demokroger.error.UserNotFoundException;
 import com.example.demokroger.demokroger.repository.UserRepository;
@@ -9,7 +9,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,4 +1,4 @@
-package com.example.demokroger.demokroger.config;
+package com.example.demokroger.demokroger.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

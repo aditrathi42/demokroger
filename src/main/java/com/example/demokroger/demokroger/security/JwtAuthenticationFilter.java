@@ -1,4 +1,4 @@
-package com.example.demokroger.demokroger.config;
+package com.example.demokroger.demokroger.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
