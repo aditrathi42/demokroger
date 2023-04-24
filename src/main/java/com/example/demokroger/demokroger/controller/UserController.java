@@ -23,4 +23,8 @@ public class UserController {
     public ResponseEntity<User> getUserById(@PathVariable Integer id) throws UserNotFoundException {
         return ResponseEntity.ok(userService.getUserById(id));
     }
+    @GetMapping("/bq")
+    public ResponseEntity<String> getBq() throws Exception {
+        return ResponseEntity.ok(userService.getBigqueryResult());
+    }
 }
