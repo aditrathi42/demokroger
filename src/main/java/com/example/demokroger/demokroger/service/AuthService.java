@@ -30,7 +30,7 @@ public class AuthService {
                 .name(user.getName())
                 .email(user.getEmail())
                 .password(passwordEncoder.encode(user.getPassword()))
-                .userRole(UserRole.valueOf(user.getUserRole().name()))
+                .userRole(user.getUserRole())
                 .build();
 
 
